@@ -6,86 +6,155 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 70,
-        backgroundColor: Colors.blueGrey[400],
-        title: Center(
-          child: Text(
-            'Text Style',
-            style: TextStyle(
-              fontSize: 30,
-              letterSpacing: 2,
-              fontWeight: FontWeight.bold,
-              fontFamily: 'Font1',
-              shadows: <Shadow>[
-                Shadow(
-                  blurRadius: 50,
-                  color: Colors.white70,
+      backgroundColor: Color(0xFF626ce3),
+      body: SafeArea(
+        child: SizedBox(
+          width: double.infinity,
+          child: Column(
+            spacing: 70,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Text('Sister',
+                style: TextStyle(
+                    fontSize: 50,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white
+                ),),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.65,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text('CALLING...',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Container(
+                          width: 60,
+                          height: 60,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white12
+                          ),
+                          child: Icon(Icons.person,
+                            size: 40,
+                            color: Colors.white,),
+                        ),
+                        Container(
+                          width: 60,
+                          height: 60,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white12
+                          ),
+                          child: Icon(Icons.add,
+                            size: 40,
+                            color: Colors.white,),
+                        ),
+                        Container(
+                          width: 60,
+                          height: 60,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white12
+                          ),
+                          child: Icon(Icons.mic_off,
+                            size: 40,
+                            color: Colors.white,),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Container(
+                          width: 60,
+                          height: 60,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white12
+                          ),
+                          child: Icon(Icons.pause,
+                            size: 40,
+                            color: Colors.white,),
+                        ),
+                        Container(
+                          width: 60,
+                          height: 60,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white12
+                          ),
+                          child: Icon(Icons.videocam,
+                            size: 40,
+                            color: Colors.white,),
+                        ),
+                        Container(
+                          width: 60,
+                          height: 60,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white12
+                          ),
+                          child: Icon(Icons.record_voice_over_rounded,
+                            size: 40,
+                            color: Colors.white,),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+                      children: [
+                        Container(
+                          width: 60,
+                          height: 60,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white12
+                          ),
+                          child: Icon(Icons.volume_up,
+                            size: 40,
+                            color: Colors.white,),
+                        ),
+                        Container(
+                            width: 70,
+                            height: 70,
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.red
+                            ),
+                            child: Icon(
+                              Icons.call_end,
+                              color: Colors.white,
+                              size: 40,)
+                        ),
+                        Container(
+                          width: 60,
+                          height: 60,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white12
+                          ),
+                          child: Icon(Icons.dialpad,
+                            size: 40,
+                            color: Colors.white,),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+
+            ],
           ),
         ),
-      ),
-      backgroundColor: Colors.grey[200],
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Text(
-            'Hello I am Ashraf. This is a task about text style. I will do my best to give a good task.',
-            style: TextStyle(
-              fontSize: 20,
-              letterSpacing: 1,
-              fontWeight: FontWeight.w900,
-              fontFamily: 'Font1',
-
-              shadows: <Shadow>[
-                Shadow(
-                  blurRadius: 5,
-                  color: Colors.black26,
-                ),
-              ],
-              color: Colors.black87,
-            ),
-          ),
-          RichText(
-            text: TextSpan(
-              text: 'Don\'t have an account ',
-              style: TextStyle(
-                color: Colors.black87,
-                fontSize: 16,
-                fontWeight: FontWeight.w900,
-
-              ),
-              children: [
-                TextSpan(
-                  text: 'Sign up',
-                  style: TextStyle(
-                    color: Colors.blue[600],
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                TextSpan(
-                  text: ' now ',
-                  style: TextStyle(
-                    color: Colors.green[600],
-                    fontSize: 16,
-                    fontStyle: FontStyle.italic,
-                  ),
-                ),
-                TextSpan(
-                  text: 'or log in!',
-                  style: TextStyle(
-                    color: Colors.red[600],
-                    fontSize: 16,
-                    fontWeight: FontWeight.w900,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
       ),
     );
   }
