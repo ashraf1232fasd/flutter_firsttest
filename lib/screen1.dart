@@ -21,8 +21,10 @@ class MyApp extends StatelessWidget {
                     color: Colors.white
                 ),),
               SizedBox(
+
                 height: MediaQuery.of(context).size.height * 0.65,
                 child: Column(
+
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text('CALLING...',
@@ -33,6 +35,7 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                     Row(
+
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Container(
